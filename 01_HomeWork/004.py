@@ -19,7 +19,7 @@ def user_input(msg):
             print('Вводите только числа от 1 до 100')
 
 def breaking_chocolate(n, m, k):
-    if k%n == 0 or k%m == 0:
+    if (k%n == 0 or k%m == 0) and k < n*m:
         result = "yes"
     else:
         result = "no"
