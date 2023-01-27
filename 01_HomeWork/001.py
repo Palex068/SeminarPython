@@ -16,13 +16,10 @@ def user_input():
 
 def sum_of_digits(number):
     digits_sum = 0
-    digits = ''
     while number > 0:
         digits_sum += int(number%10)
-        digits = str(int(number%10)) + digits #TODO Поправить формирование строки
         number //=10
-    result = str(digits_sum) + ' (' + digits + ')'
-    return result
+    return digits_sum
 
 import os
 os.system('cls')
