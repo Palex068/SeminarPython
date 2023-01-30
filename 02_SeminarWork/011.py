@@ -27,11 +27,11 @@ a = user_input()
 
 f0, f1, count = 0, 1, 2
 
-while f1 <  a:
+while f1 <=  a:
+    if f1 == a:
+        print(count)
+        break
     f0, f1 = f1 ,f0 + f1
     count += 1
-
-if f1 == a:
-    print(count)
 else:
     print("-1")
