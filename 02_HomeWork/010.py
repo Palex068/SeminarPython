@@ -22,13 +22,13 @@ def user_input(): # безопасный ввод
         except ValueError:
             print('Вводите только числа от 1 до 1000')
 
-def random_list(n): # Список случайных чисел
+def random_list(n): # Список случайных чисел, очень не хотелось их вбивать руками))
     N = []
     for _ in range(n):
         N.append(random.randint(0, 1))
     return N
 
-def print_zero_or_one_counter(N):
+def print_zero_or_one_counter(N): # не удержался и тоже выделил в функцию)
     zero_counter = one_counter = 0
     for i in range(len(N)):
         if N[i] == 0:
