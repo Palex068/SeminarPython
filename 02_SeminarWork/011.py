@@ -8,6 +8,10 @@
 Input: 5
 Output: 6
 """
+
+# 1  2  3  4  5  6  7   8   9  10  11
+# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,
+
 def user_input():
     while True:
         try:
@@ -21,19 +25,13 @@ def user_input():
 
 a = user_input()
 
-f0 = 0
-f1 = 1
-last_f = 1
-count = 3
-while last_f <  a:
-    last_f = f0 + f1
-    temp = f1 + last_f
-    f0 = f1
-    f1 = last_f
-    last_f = temp
+f0, f1, count = 0, 1, 2
+
+while f1 <  a:
+    f0, f1 = f1 ,f0 + f1
     count += 1
 
-if last_f == a:
+if f1 == a:
     print(count)
 else:
     print("-1")
