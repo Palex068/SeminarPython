@@ -5,7 +5,7 @@
 10 -> 1 2 4 8
 """
 
-import os
+import os, math
 os.system('cls')
 
 def user_input(): # безопасный ввод
@@ -22,9 +22,11 @@ def user_input(): # безопасный ввод
 n = user_input()
 result = 1
 result_list = []
-while n > result * 2:
-    result *= 2 
+while n >= result:
     result_list.append(result)
-    
+    result *= 2 
 print(*result_list)
 
+# решение в одну строку, от вездесущего ребенка)
+
+print(*[2 ** x for x in range(0, int(math.log2(int(input("Введите число: ")))) + 1)])
