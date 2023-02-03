@@ -32,7 +32,7 @@ def random_list(n, range_start = -5, range_finish = 5):  # Список случ
         N.append(random.randint(range_start, range_finish + 1))
     return N
 
-def value_count(value):
+def value_count(value, N):
     result_count = 0
     for i in N:
         if i == value:
@@ -48,7 +48,7 @@ print(f"\n{sorted(N)}\n")
 
 k = user_input("Искомое число", - 100, 100)
 
-result = value_count(k)
+result = value_count(k, N)
 
 print(f"\nРешение через цикл (функцию) - обычная запись: {result}")
 
