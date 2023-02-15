@@ -14,7 +14,7 @@ C = int(input('Число C: '))
 D = B * B - 4 * A * C
 if D > 0:
     x1 = ((-B) + D ** 0.5) / 2 * A
-    x2 = ((-B) - sqrt(D)) / 2 * A
+    x2 = ((-B) - (D)) ** 0,5 / 2 * A
     print(round(x1, 3), round(x2, 3))
 elif D == 0:
     x1 = (-B) / 2 * A
