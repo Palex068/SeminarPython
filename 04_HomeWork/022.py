@@ -29,6 +29,7 @@ m = (int(input("Введите количество элементов втор�
 
 N = random_list(n, -10, 10)
 M = [random.randint(-10, 10) for _ in range(m)]
+# first = map(int, input().split()) 
 
 print(*sorted(N), sep="\t")
 print(*sorted(M), sep="\t")
@@ -44,3 +45,5 @@ print(*sorted(set(result)), sep="\t")
 
 union_result = sorted(set(N).intersection(set(M)))
 print(*union_result, sep="\t")
+
+ 
