@@ -22,21 +22,27 @@
 # 3
 
 
-import random
+# import random
 
-N = [random.randint(0, 2) for _ in range(int(input("Введите количество шариков: ")))]
-# N = [5, 1, 3, 3, 3, 2]
+# N = [random.randint(0, 2) for _ in range(int(input("Введите количество шариков: ")))]
+# # N = [5, 1, 3, 3, 3, 2]
 
-# print(*N)
+# # print(*N)
 
-temp_list = list()
-index = 0
-while index < (len(N) - 2):
-    if N[index] == N[index + 1] and N[index] == N[index + 2]:
-        index += 3
-    else:
-        temp_list.append(N[index])
-        index += 1
-# print(*temp_list)
+# temp_list = list()
+# index = 0
+# while index < (len(N) - 2):
+#     if N[index] == N[index + 1] and N[index] == N[index + 2]:
+#         index += 3
+#     else:
+#         temp_list.append(N[index])
+#         index += 1
+# # print(*temp_list)
 
-print((len(N) - len(temp_list)) // 3)
+# print((len(N) - len(temp_list)) // 3)
+
+
+from itertools import groupby
+
+res_list = [len(list(v)) for ch, v in groupby(input().split())]
+print(sum([i for i in res_list if i > 2]))
