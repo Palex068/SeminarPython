@@ -9,6 +9,6 @@ an  = a1 + (n-1) * d.
 Вывод: 7 9 11 13 15
 """
 
-a1, d, n = int(input()), int(input()), int(input())
+a1, d, n = (int(input()) for _ in 'abc')
 M = [a1 + (i - 1) * d for i in range(1, n + 1)]
 print(*M)
